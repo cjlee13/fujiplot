@@ -1,0 +1,10 @@
+--- ../../lib/Circos.pm	2020-12-07 13:24:35.900764177 +0800
++++ /home/cjlee/Circos.pm	2020-12-07 13:31:44.046788962 +0800
+@@ -2183,6 +2183,7 @@
+ 						$data_point_prev = $data_point;
+ 					}
+ 					# keep refining this layer, until no refinements are left to make
++                    undef $data_point_prev;
+ 					goto REFINE if $refined;
+ 					stop_timer("track_text_refine");
+ 
